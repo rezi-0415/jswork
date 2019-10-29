@@ -1,6 +1,6 @@
-function monkey(){
-    let total = document.getElementById("monkeytotal").Value
-    let kick = document.getElementById("monkeykick").Value
+function monkey() {
+    let total = document.getElementById("monkeytotal").value
+    let kick = document.getElementById("monkeykick").value
     total = parseInt(total) && Number(total)
     kick = parseInt(kick) && Number(kick)
     if(isNaN(total)||isNaN(kick)){
@@ -17,7 +17,22 @@ function monkey(){
         head = monkey.shift()
         if(i%kick!=0){
             monkey.push(head);
+
         }
     }
     document.getElementById('monkeyking').innerText = monkey[0]
 }
+
+function stat(){
+    let str = document.getElementById("str").value
+    let obj = {}
+    let array = str.split("")
+    array = array.sort()
+    for (let i = 0; i < str.length; ++i) {
+        let yff = array[i]
+        obj[yff] = (obj [yff] + 1) || 1;
+    }
+document.getElementById('result').innerText = JSON.stringify(obj)
+
+}
+
