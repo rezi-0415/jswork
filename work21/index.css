@@ -1,0 +1,21 @@
+.title{
+    text-align: center;
+}
+
+.banner {
+    position: relative;
+    overflow: hidden;
+    margin: 10px auto;
+    width: 958px;
+    height: 400px
+}
+
+.banner ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.hot {
+    position: absolute;
+}
